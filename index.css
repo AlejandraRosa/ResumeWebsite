@@ -37,7 +37,7 @@ a { text-decoration: none; }
 
 #wrapper {
   height: 400vh;
-  display: flex; */
+  display: flex;
   justify-content: center;
 }
 
