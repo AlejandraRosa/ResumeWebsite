@@ -6,7 +6,7 @@ html {
 
 .main-content {
   padding-top: 50px;
-  padding-right: 30px;
+  padding-right: 80px;
   padding-bottom: 50px;
   padding-left: 80px;
 }
@@ -28,6 +28,7 @@ p {
 
 li {
   font-size: 13px;
+  font-family: 'Rubik', serif;
   letter-spacing: 0.05em;
 }
 

@@ -13,43 +13,46 @@ var fin = wrapperNode.clientHeight - vh + linkNodes.clientHeight
 
 function calculateAnimations() {
   return [
-    /* animate Cs */
-    { range: [-1, fin * 0.5],   selector: '.c', type: 'scale', style: 'transform:translateY', from: 0, to: 25, unit: 'px' },
-    { range: [fin * 0.5, fin],  selector: '.c', type: 'scale', style: 'transform:translateY', from: 25, to: 0, unit: 'px' },
-    { range: [fin * 0.4, fin],  selector: '.c', type: 'change', style: 'color', to: '#ffb515' },
+    /* animate Ds */
+    { range: [-1, fin * 0.5],   selector: '.d', type: 'scale', style: 'transform:translateY', from: 0, to: 25, unit: 'px' },
+    { range: [fin * 0.5, fin],  selector: '.d', type: 'scale', style: 'transform:translateY', from: 25, to: 0, unit: 'px' },
+    { range: [fin * 0.4, fin],  selector: '.d', type: 'change', style: 'color', to: '#ffb515' },
 
-    /* animate Hs */
-    { range: [-1, fin * 0.5],   selector: '.h', type: 'scale', style: 'transform:scaleX', from: 1, to: 0.5 },
-    { range: [-1, fin * 0.5],   selector: '.h', type: 'scale', style: 'transform:scaleY', from: 1, to: 0.5 },
-    { range: [fin * 0.5, fin],  selector: '.h', type: 'scale', style: 'transform:scaleX', from: 0.5, to: 1 },
-    { range: [fin * 0.5, fin],  selector: '.h', type: 'scale', style: 'transform:scaleY', from: 0.5, to: 1 },
-    { range: [fin * 0.3, fin],  selector: '.h', type: 'change', style: 'color', to: '#1fd1ec' },
-
-    /* animate Os */
-    { range: [fin * 0.1, fin],  selector: '.o', type: 'randomizeColor' },
+    /* animate Ns */
+    { range: [-1, fin * 0.5],   selector: '.n', type: 'scale', style: 'transform:scaleX', from: 1, to: 0.5 },
+    { range: [-1, fin * 0.5],   selector: '.n', type: 'scale', style: 'transform:scaleY', from: 1, to: 0.5 },
+    { range: [fin * 0.5, fin],  selector: '.n', type: 'scale', style: 'transform:scaleX', from: 0.5, to: 1 },
+    { range: [fin * 0.5, fin],  selector: '.n', type: 'scale', style: 'transform:scaleY', from: 0.5, to: 1 },
+    { range: [fin * 0.3, fin],  selector: '.n', type: 'change', style: 'color', to: '#1fd1ec' },
 
     /* animate Rs */
-    { range: [-1, fin * 0.5],   selector: '.r', type: 'scale', style: 'transform:rotateX', from: 0, to: 90, unit: 'deg' },
-    { range: [fin * 0.5, fin],  selector: '.r', type: 'scale', style: 'transform:rotateX', from: 90, to: 0, unit: 'deg' },
-    { range: [fin * 0.3, fin],  selector: '.r', type: 'change', style: 'color', to: '#8382f9' },
+    { range: [fin * 0.1, fin],  selector: '.r', type: 'randomizeColor' },
+
+    /* animate Ls */
+    { range: [-1, fin * 0.5],   selector: '.l', type: 'scale', style: 'transform:rotateX', from: 0, to: 90, unit: 'deg' },
+    { range: [fin * 0.5, fin],  selector: '.l', type: 'scale', style: 'transform:rotateX', from: 90, to: 0, unit: 'deg' },
+    { range: [fin * 0.3, fin],  selector: '.l', type: 'change', style: 'color', to: '#8382f9' },
 
     /* animate Es */
     { range: [fin * 0.3, fin],  selector: '.e', type: 'change', style: 'color', to: '#ff1b9b' },
+
+  
+
 
     /* animate Gs */
     { range: [-1, fin * 0.5],   selectors: ['.g', '.j'], type: 'scale', style: 'transform:rotateZ', from: 0, to: 180, unit: 'deg' },
     { range: [fin * 0.5, fin],  selectors: ['.g', '.j'], type: 'scale', style: 'transform:rotateZ', from: 180, to: 360, unit: 'deg' },
     { range: [fin * 0.4, fin],  selectors: ['.g', '.j'], type: 'change', style: 'color', to: '#ff8b1c' },
 
-    /* animate As */
+    /* animate As and S*/
     { range: [-1, fin * 0.5],   selectors: ['.a', '.s'], type: 'scale', style: 'transform:rotateZ', from: 0, to: -180, unit: 'deg' },
     { range: [fin * 0.5, fin],  selectors: ['.a', '.s'], type: 'scale', style: 'transform:rotateZ', from: -180, to: -360, unit: 'deg' },
     { range: [fin * 0.4, fin],  selectors: ['.a', '.s'], type: 'change', style: 'color', to: '#c05bdb' },
 
-    /* animate Ps */
-    { range: [-1, fin * 0.5],   selectors: ['.p', '.dash'], type: 'scale', style: 'opacity', from: 1, to: 0.1 },
-    { range: [fin * 0.5, fin],  selectors: ['.p', '.dash'], type: 'scale', style: 'opacity', from: 0.1, to: 1 },
-    { range: [fin * 0.4, fin],  selectors: ['.p', '.dash'], type: 'change', style: 'color', to: '#ff537c' },
+    /* animate Os */
+    { range: [-1, fin * 0.5],   selectors: ['.o', '.dash'], type: 'scale', style: 'opacity', from: 1, to: 0.1 },
+    { range: [fin * 0.5, fin],  selectors: ['.o', '.dash'], type: 'scale', style: 'opacity', from: 0.1, to: 1 },
+    { range: [fin * 0.4, fin],  selectors: ['.o', '.dash'], type: 'change', style: 'color', to: '#ff537c' },
 
     /* animate line */
     { range: [-1, fin],         selector: '.line', type: 'scale', style: 'width', from: 0.01, to: 50, unit: '%' },
