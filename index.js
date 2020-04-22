@@ -14,9 +14,14 @@ var fin = wrapperNode.clientHeight - vh + linkNodes.clientHeight
 function calculateAnimations() {
   return [
     /* animate Ds */
-    { range: [-1, fin * 0.5],   selector: '.d', type: 'scale', style: 'transform:translateY', from: 0, to: 25, unit: 'px' },
-    { range: [fin * 0.5, fin],  selector: '.d', type: 'scale', style: 'transform:translateY', from: 25, to: 0, unit: 'px' },
-    { range: [fin * 0.4, fin],  selector: '.d', type: 'change', style: 'color', to: '#ffb515' },
+    { range: [-1, fin * 0.5],   selector: ['.d'], type: 'scale', style: 'transform:translateY', from: 0, to: 25, unit: 'px' },
+    { range: [fin * 0.5, fin],  selector: ['.d'], type: 'scale', style: 'transform:translateY', from: 25, to: 0, unit: 'px' },
+    { range: [fin * 0.4, fin],  selector: ['.d'], type: 'change', style: 'color', to: '#ffb515'},
+
+    /* animate Ss */
+    { range: [-1, fin * 0.5],   selector: ['.s'], type: 'scale', style: 'transform:translateY', from: 0, to: 25, unit: 'px' },
+    { range: [fin * 0.5, fin],  selector: ['.s'], type: 'scale', style: 'transform:translateY', from: 25, to: 0, unit: 'px' },
+    { range: [fin * 0.4, fin],  selector: ['.s'], type: 'change', style: 'color', to: '#1fd1ec'},
 
     /* animate Ns */
     { range: [-1, fin * 0.5],   selector: '.n', type: 'scale', style: 'transform:scaleX', from: 1, to: 0.5 },
@@ -36,18 +41,17 @@ function calculateAnimations() {
     /* animate Es */
     { range: [fin * 0.3, fin],  selector: '.e', type: 'change', style: 'color', to: '#ff1b9b' },
 
-  
 
 
-    /* animate Gs */
+    /* animate Js */
     { range: [-1, fin * 0.5],   selectors: ['.g', '.j'], type: 'scale', style: 'transform:rotateZ', from: 0, to: 180, unit: 'deg' },
     { range: [fin * 0.5, fin],  selectors: ['.g', '.j'], type: 'scale', style: 'transform:rotateZ', from: 180, to: 360, unit: 'deg' },
     { range: [fin * 0.4, fin],  selectors: ['.g', '.j'], type: 'change', style: 'color', to: '#ff8b1c' },
 
-    /* animate As and S*/
-    { range: [-1, fin * 0.5],   selectors: ['.a', '.s'], type: 'scale', style: 'transform:rotateZ', from: 0, to: -180, unit: 'deg' },
-    { range: [fin * 0.5, fin],  selectors: ['.a', '.s'], type: 'scale', style: 'transform:rotateZ', from: -180, to: -360, unit: 'deg' },
-    { range: [fin * 0.4, fin],  selectors: ['.a', '.s'], type: 'change', style: 'color', to: '#c05bdb' },
+    /* animate As */
+    { range: [-1, fin * 0.5],   selectors: ['.a'], type: 'scale', style: 'transform:rotateZ', from: 0, to: -180, unit: 'deg' },
+    { range: [fin * 0.5, fin],  selectors: ['.a'], type: 'scale', style: 'transform:rotateZ', from: -180, to: -360, unit: 'deg' },
+    { range: [fin * 0.4, fin],  selectors: ['.a'], type: 'change', style: 'color', to: '#c05bdb' },
 
     /* animate Os */
     { range: [-1, fin * 0.5],   selectors: ['.o', '.dash'], type: 'scale', style: 'opacity', from: 1, to: 0.1 },
@@ -63,7 +67,7 @@ function calculateAnimations() {
     { range: [fin - 30, fin],   selector: '.scroll-down', type: 'change', style: 'display', to: 'none' },
 
     /* animate links */
-    { range: [0.8 * fin, fin], selector: '.links', type: 'scale', style: 'opacity', from: 0, to: 1 }
+    { range: [0.8 * fin, fin], selector: '.links', type: 'scale', style: 'opacity', from: 0, to: 1 },
   ]
 }
 
