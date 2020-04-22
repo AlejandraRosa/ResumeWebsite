@@ -22,13 +22,13 @@ body {
 ::-webkit-scrollbar { display: legacy; }
 
 p {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.05em;
 }
 
 
 li {
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Rubik', serif;
   letter-spacing: 0.05em;
 }
