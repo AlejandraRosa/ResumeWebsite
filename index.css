@@ -79,6 +79,10 @@ a { text-decoration: none; }
 .links {
   height: calc(100vh - 420px);
   text-align: center;
+  padding-top: 50px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+  padding-left: 80px;
 }
 
 .date {
