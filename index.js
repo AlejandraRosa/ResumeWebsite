@@ -96,3 +96,4 @@ animate()
 window.addEventListener('resize', function() {
   choreographer.updateAnimations(calculateAnimations())
 })
+
