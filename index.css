@@ -4,6 +4,13 @@ html {
   margin: 0 0;
 }
 
+.main-content {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
 body {
   height: 100%;
   overflow: auto;
@@ -15,6 +22,11 @@ body {
 ::-webkit-scrollbar { display: none; }
 
 p {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+li {
   font-size: 13px;
   letter-spacing: 0.05em;
 }
@@ -66,6 +78,11 @@ a { text-decoration: none; }
 .links {
   height: calc(100vh - 420px);
   text-align: center;
+}
+
+.date {
+  height: calc(100vh - 420px);
+  text-align: right;
 }
 
 .links .quickstart {
