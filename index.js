@@ -41,8 +41,6 @@ function calculateAnimations() {
     /* animate Es */
     { range: [fin * 0.3, fin],  selector: '.e', type: 'change', style: 'color', to: '#ff1b9b' },
 
-
-
     /* animate Js */
     { range: [-1, fin * 0.5],   selectors: ['.g', '.j'], type: 'scale', style: 'transform:rotateZ', from: 0, to: 180, unit: 'deg' },
     { range: [fin * 0.5, fin],  selectors: ['.g', '.j'], type: 'scale', style: 'transform:rotateZ', from: 180, to: 360, unit: 'deg' },
